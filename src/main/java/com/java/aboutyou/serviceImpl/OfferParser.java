@@ -29,7 +29,7 @@ public class OfferParser implements Parser<List<Offer>> {
         String homePage = "https://www.aboutyou.de";
         StringBuilder criteriaUrl = new StringBuilder();
         criteriaUrl.append(homePage).append("/suche?term=").append(criteria).append("&category=20201");
-        Document doc = Jsoup.connect(criteriaUrl.toString()).timeout(1000).get();
+        Document doc = Jsoup.connect(criteriaUrl.toString()).timeout(2000).get();
         requestCount++;
 
         Elements elems = doc.select("div.row.list-wrapper.product-image-list");
@@ -50,7 +50,7 @@ public class OfferParser implements Parser<List<Offer>> {
 
             parsePrice(offer, elem);
 
-            Document productDoc = Jsoup.connect(homePage + productUrl).timeout(1000).get();
+            Document productDoc = Jsoup.connect(homePage + productUrl).timeout(2000).get();
             requestCount++;
             Element productElem = productDoc.body();
             offer.color(productElem.select("div.adp-stylepicker.bottom-5 a").attr("title"));
