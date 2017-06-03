@@ -17,21 +17,6 @@
 <build>
     <plugins>
         <plugin>
-            <!-- Build an executable JAR -->
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <version>3.0.2</version>
-            <configuration>
-                <archive>
-                    <manifest>
-                        <addClasspath>true</addClasspath>
-                        <classpathPrefix>lib/</classpathPrefix>
-                        <mainClass>com.java.aboutyou.AboutYou</mainClass>
-                    </manifest>
-                </archive>
-            </configuration>
-        </plugin>
-        <plugin>
             <artifactId>maven-assembly-plugin</artifactId>
             <configuration>
                 <archive>
@@ -40,6 +25,8 @@
                     </manifest>
                 </archive>
                 <descriptorRefs>
+                    <!-- this is used to classify executable file that we can run from cmd
+                     now we can run: java -jar WDS_TestTask-1.0-jar-with-dependencies.jar  Blanche to execute the program  -->
                     <descriptorRef>jar-with-dependencies</descriptorRef>
                 </descriptorRefs>
             </configuration>
@@ -84,7 +71,5 @@
         </dependency>
 
     </dependencies>
-
-
 
 </project>
