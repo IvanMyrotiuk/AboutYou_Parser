@@ -18,6 +18,14 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.util.List;
 
+/**
+ * Class<code> OfferXMLDocumentCreator</> implements DocumentCreator interface and can create
+ * XML document
+ *
+ * @version 1.0
+ * @author Ivan Myrotiuk
+ * @since 02-06-2017
+ */
 public class OfferXMLDocumentCreator implements DocumentCreator<List<Offer>> {
 
     private static final Logger LOGGER = Logger.getLogger(OfferXMLDocumentCreator.class.getName());

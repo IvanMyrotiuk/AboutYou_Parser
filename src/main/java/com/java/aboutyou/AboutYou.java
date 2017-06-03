@@ -15,6 +15,14 @@ import java.io.IOException;
 import java.util.List;
 
 
+/**
+ * Class<code> AboutYou</> represent executable class that
+ * retrieve information from site AboutYou and create xml document using retrieved information
+ *
+ * @version 1.0
+ * @author Ivan Myrotiuk
+ * @since 02-06-2017
+ */
 public class AboutYou {
     private static final Logger LOGGER = Logger.getLogger(AboutYou.class.getName());
 

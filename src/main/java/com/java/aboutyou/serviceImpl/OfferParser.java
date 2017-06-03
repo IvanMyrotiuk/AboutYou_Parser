@@ -12,6 +12,15 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * Class<code> OfferParser</> implements Parser interface and can retrieve
+ * needed information from AboutYou site
+ *
+ * @version 1.0
+ * @author Ivan Myrotiuk
+ * @since 02-06-2017
+ */
 public class OfferParser implements Parser<List<Offer>> {
     @Override
     public synchronized List<Offer> parse(String criteria, Summary.SummaryBuilder summaryBuilder) throws IOException {
